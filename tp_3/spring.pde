@@ -4,7 +4,7 @@ class Spring {
   float density;
   float pos;
   float vel;
-  
+  float timeSpeed = 0.6;
   
   Rectangle r;
   Circle c;
@@ -19,10 +19,14 @@ class Spring {
     vel = 0;
   }
   
+  void setPos(float y) {
+    pos = y - c.p1.y + pos;
+  }
+  
   void draw() {
     float drag = -0.5 * vel * abs(vel) * density;
-    vel += (- k * pos + drag) / mass;
-    pos += vel;
+    vel += (- k * pos + drag) / mass * timeSpeed;
+    pos += vel * timeSpeed;
     c.p1.y = pos + r.y1 + 300;
     //c.p1.y += cos(millis() * w) * 20;
     
