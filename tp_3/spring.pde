@@ -37,5 +37,15 @@ class Spring {
     background(255);
     r.draw();
     c.draw();
+    
+    float diff = c.p1.y - r.y1;
+    
+    for (int i = 0; i < 15; i++) {
+      if (i % 2 == 0) {
+        line(r.x1, r.y1 + diff / 15 * i, r.x2, r.y1 + diff / 15 * (i + 1));
+      } else {
+        line(r.x2, r.y1 + diff / 15 * i, r.x1, r.y1 + diff / 15 * (i + 1));
+      }
+    }
   }
 }
