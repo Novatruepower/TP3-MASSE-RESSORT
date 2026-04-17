@@ -39,12 +39,14 @@ class Spring {
     c.draw();
     
     float diff = c.p1.y - r.y1;
+    diff /= 15;
     
     for (int i = 0; i < 15; i++) {
+      float newY1 = r.y1 + diff * (i + 1);
       if (i % 2 == 0) {
-        line(r.x1, r.y1 + diff / 15 * i, r.x2, r.y1 + diff / 15 * (i + 1));
+        line(r.x1, newY1 - diff, r.x2, newY1);
       } else {
-        line(r.x2, r.y1 + diff / 15 * i, r.x1, r.y1 + diff / 15 * (i + 1));
+        line(r.x2, newY1 - diff, r.x1, newY1);
       }
     }
   }
