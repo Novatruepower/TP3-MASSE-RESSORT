@@ -3,7 +3,7 @@ Spring s;
 void setup() {
   size(1000, 600);
   background(255);
-  s =  new Spring(width / 2, 80);
+s =  new Spring(width / 2, 80, width / 2, 300, 100, 10);
 }
 
 void draw() {
