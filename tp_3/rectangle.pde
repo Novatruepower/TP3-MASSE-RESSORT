@@ -1,4 +1,4 @@
-class Rectangle {
+class Rectangle implements ISpringParts<Rectangle> {
   //Top-Left
   float x1;
   float y1;
@@ -14,7 +14,7 @@ class Rectangle {
   
   Rectangle(float x, float y, float rWidth, float rHeight) {
     float xRight = x + rWidth;
-    float yBottom = y - rHeight;
+    float yBottom = y + rHeight;
     x1 = x;
     y1 = y;
     x2 = xRight;
@@ -34,6 +34,10 @@ class Rectangle {
     this.y3 = y3;
     this.x4 = x4;
     this.y4 = y4;
+  }
+  
+  Rectangle getPart() {
+    return this;
   }
   
   void draw() {

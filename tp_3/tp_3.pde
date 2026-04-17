@@ -7,7 +7,7 @@ void setup() {
 }
 
 void mouseClicked() {
-  s.setPos(mouseY);
+  //s.setPos(mouseY);
 }
 
 void mouseDragged() {

@@ -1,6 +1,5 @@
 interface ISpringParts<T> {
-  void attach(T newPart);
-  //void attach(ISpringParts<T> newPart);
+  T getPart();
   
   void draw();
 }
