@@ -6,18 +6,19 @@ void setup() {
   s = new Spring(width / 2, 80, 2.5, 50, 0.5);
 }
 
-void mouseClicked() {
-  s.setPos(mouseY);
-}
+//void mouseClicked() {
+  //s.setPos(mouseY);
+//}
 
 void mouseDragged() {
   // laggy
-  //s.setPos(mouseY);
+  s.setPos(mouseY);
+  s.draw();
 }
 
 void draw() {
-  /*if (mousePressed) {
+  if (mousePressed) {
     s.setPos(mouseY);
-  } */
-  s.draw();
+  } else
+    s.draw();
 }

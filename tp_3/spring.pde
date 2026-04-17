@@ -11,7 +11,7 @@ class Spring {
   
   public Spring(float x1, float y1, float k, float m, float d) {
     r = new Rectangle(x1-20/2, y1, 20, 20);
-    c = new Circle(x1, y1+75, 20);
+    c = new Circle(x1 + 9, y1+75, 20);
     mass = m;
     density = d;
     this.k = k;
@@ -20,7 +20,7 @@ class Spring {
   }
   
   void setPos(float y) {
-    pos = y - c.p1.y + pos;
+    pos = y - c.p1.y;
   }
   
   void draw() {
