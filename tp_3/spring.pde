@@ -14,6 +14,8 @@ class Spring {
   
   void draw() {
     c.p1.y = cos(millis() / 10 * w) * 100 + 300;
+    
+    background(255);
     r.draw();
     c.draw();
   }
