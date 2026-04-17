@@ -10,6 +10,10 @@ void setup() {
   //s.setPos(mouseY);
 //}
 
+void mouseWheel(MouseEvent event) {
+  s.k += event.getCount();
+}
+
 void mouseDragged() {
   // laggy
   s.setPos(mouseY);
