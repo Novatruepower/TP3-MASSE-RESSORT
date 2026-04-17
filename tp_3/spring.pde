@@ -1,20 +1,20 @@
 class Spring {
   float mass;
   float w;
-  PVector weightPos;
   
+  Rectangle r;
   Circle c;
   
-  public Spring(float x1, float y1, float x2, float y2, float k, float m) {
+  public Spring(float x1, float y1, float k, float m) {
+    r = new Rectangle(x1-20/2, y1, 20, 20);
     c = new Circle(x1, y1+75, 20);
-    weightPos = new PVector(x2, y2);
     mass = m;
     w = sqrt(k / m);
   }
   
   void draw() {
-    weightPos.y = cos(millis() / 10 * w) * 100;
-    circle(weightPos.x, weightPos.y, 20);
+    c.p1.y = cos(millis() / 10 * w) * 100 + 300;
+    r.draw();
     c.draw();
   }
 }
