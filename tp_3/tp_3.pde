@@ -11,7 +11,7 @@ void setup() {
 //}
 
 void mouseWheel(MouseEvent event) {
-  s.k += event.getCount();
+    s.k += event.getCount() * 0.25;
 }
 
 void mouseDragged() {
